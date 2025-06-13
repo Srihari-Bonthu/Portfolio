@@ -10,7 +10,7 @@
     "copy": "copyfiles -u 1 public/**/* dist/",
     "minify:css": "minify dist/styles.css > dist/styles.min.css && mv dist/styles.min.css dist/styles.css",
     "minify:js": "minify dist/script.js > dist/script.min.js && mv dist/script.min.js dist/script.js",
-    "build": "npm-run-all clean copy minify:css minify:js"
+    "build": "npx npm-run-all clean copy minify:css minify:js"
   },
   "repository": {
     "type": "git",
