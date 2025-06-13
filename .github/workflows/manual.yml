@@ -4,6 +4,9 @@ name: Build and Deploy to GitHub Pages
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write   # <- This lets GITHUB_TOKEN push to repository
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
