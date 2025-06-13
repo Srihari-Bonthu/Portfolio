@@ -4,14 +4,12 @@
   "description": "## About This is a professional portfolio website for Bonthu Srihari Babu, a QA Automation Engineer with 3+ years of experience in JavaScript, Node.js, and automation frameworks.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "clean": "rm -rf dist",
-    "copy": "copyfiles -u 1 public/**/* dist/",
-    "minify:css": "minify dist/styles.css > dist/styles.min.css && mv dist/styles.min.css dist/styles.css",
-    "minify:js": "minify dist/script.js > dist/script.min.js && mv dist/script.min.js dist/script.js",
-    "build": "npx npm-run-all clean copy minify:css minify:js"
-  },
+  "clean": "rm -rf dist",
+  "copy": "mkdir -p dist && cp -r public/* dist/",
+  "minify:css": "minify dist/styles.css > dist/styles.min.css && mv dist/styles.min.css dist/styles.css",
+  "minify:js": "minify dist/script.js > dist/script.min.js && mv dist/script.js dist/script.js",
+  "build": "npx npm-run-all clean copy minify:css minify:js"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Srihari-Bonthu/Portfolio.git"
